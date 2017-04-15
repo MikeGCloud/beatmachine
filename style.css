@@ -1,0 +1,250 @@
+::selection { background: transparent; } ::-moz-selection { background: transparent; }
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height:100%;
+}
+.wrapper{
+    height:100%;
+	background: #574b63;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	/*transition: 250ms;*/
+}
+
+.drummachine{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	padding:2em;
+}
+
+.steps{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+
+	height:100%;
+}
+
+.stepbutton{
+	margin:0 .488em 1.2em .488em;
+	height:62px;
+	width:40px;
+
+	position:relative;
+	top:0px;
+
+	display:flex;
+	justify-content: center;
+	align-items:flex-start;
+
+	background: #f0f;
+	border-radius:7px;
+
+	transition:50ms ease-in;
+	-webkit-transition: 50ms ease-in;
+}
+.stepbutton:active{
+	/*box-shadow: 0 0 0 #0002; doesn't work for FUCKING CHROME*/
+	box-shadow: 0 0 0 rgba(0 ,0 ,0 ,0.3); /*i hate using rgba but it works in FUCKING CHROME atleast*/
+	top:7px;
+}
+.stepbutton::after{
+	content:"";
+	display:block;
+
+	margin-top:10px;
+	width:20px;
+	height: 10px;
+
+	border-radius:3px;
+
+	/*background:#0008; FUCKING CHROME*/
+	background:rgba(0,0,0,0.5);
+	box-shadow: 0 0 0 0 #db5050;
+}
+.stepOn::after{
+	content:"";
+	display:block;
+
+	margin-top:10px;
+	width:20px;
+	height: 10px;
+
+	border-radius:3px;
+
+	background:#f00;
+	box-shadow: 0 0 10px 2px #f00;
+}
+
+.part1{
+	background:#c43e3e;
+	box-shadow: 0 7px 0 0 #8a1e1e;
+}
+.part2{
+	background:#f5921d;
+	box-shadow: 0 7px 0 0 #b96e15;
+}
+.part3{
+	background:#f1d621;
+	box-shadow: 0 7px 0 0 #b9a418;
+}
+.part4{
+	background:#9ec441;
+	box-shadow: 0 7px 0 0 #66831f;
+}
+
+.control{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.drumselect{
+	display:flex;
+	flex-direction: row;
+}
+
+.transport{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+.controlbutton{
+	height:100px;
+	width:100px;
+	margin:20px;
+
+	position:relative;
+	top:0;
+
+	border-radius: 10px;
+
+	display:flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: sans-serif;
+	font-size:1.448em;
+
+	transition: 25ms ease-in;
+	-webkit-transition: 25ms ease-in;
+
+}
+.controlbutton:active{
+	/*box-shadow: 0 0 0 #0002; CHROME REEEEEEEE*/
+	box-shadow: 0 0 0 rgba(0,0,0,.32);
+	top:9px;
+}
+
+.transport-button{
+	width:240px;
+}
+
+.run{
+	background: #40b56b;
+	box-shadow: 0 10px 0 #1f8b47;
+}
+.run::after{
+	content:"";
+	width:0;
+	height:0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 0 solid transparent;
+	border-left: 25px solid black;
+
+	margin-left: 5%;
+}
+
+.stop{
+	background: #b03535;
+	box-shadow: 0 10px 0 #861c1c;
+}
+.stop::after{
+	content:"";
+	width:0;
+	height:0;
+	border-top: 15px solid black;
+	border-bottom: 15px solid black;
+	border-right: 15px solid black;
+	border-left: 15px solid black;
+}
+.drum{
+	background:#3c3a54;
+	box-shadow: 0 10px 0 #262439;
+
+	color:#1f1e29;
+}
+.selected-drum{
+	box-shadow: 0 0 0 rgba(0,0,0,.32);
+	top:9px;
+}
+
+.bpm{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width:240px;
+
+	background:#3c3a54;
+	height: 67px;
+
+	border-radius: 10px;
+}
+
+.bpm-display{
+	width:0;
+
+	display:inline-flex;
+	position:relative;
+	left:-3.28em;
+
+	font-family:sans-serif;
+	font-size: 1.448em;
+	color:#1b5279;
+}
+
+.bpmfield{
+	width: 50%;
+	height:100%;
+
+	/*padding:10px;*/
+
+	flex-grow: 1;
+	-moz-appearance: textfield;
+	border-style: none;
+	border-radius:10px;
+
+	text-align:center;
+
+	font-family:sans-serif;
+	font-size: 1.448em;
+
+	color:#1b5279;
+	background: #6195ba;
+
+}
+.bpmfield::selection{
+	background:rgba(0,0,0,.5);
+	background:#1b5279;
+	color:#6195ba;
+}
+.bpmfield::-moz-selection{
+	/*background:rgba(0,0,0,.5);*/
+	border-radius:10px;
+	background:#1b5279;
+	color:#6195ba;
+}

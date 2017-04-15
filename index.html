@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BEAT MACHINE</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="drummachine">
+            <div class="control">
+                <div class="bpm">
+                    <input type="number" class='bpmfield' min=32 max=240>
+                    <span class="bpm-display">BPM</span>
+                </div>
+                <div class="drumselect">
+                    <div class="controlbutton drum drum-click selected-drum" data-drum='0'>BD</div>
+                    <div class="controlbutton drum drum-click" data-drum='1'>SD</div>
+                    <div class="controlbutton drum drum-click" data-drum='2'>CHH</div>
+                    <div class="controlbutton drum drum-click" data-drum='3'>OHH</div>
+                </div>
+                <div class="transport">
+                    <div class="transport-button controlbutton click run" align='center'></div>
+                </div>
+            </div>
+            <div class="steps">
+                <div class="stepbutton part1 click" data-step="0"></div>
+                <div class="stepbutton part1 click" data-step="1"></div>
+                <div class="stepbutton part1 click" data-step="2"></div>
+                <div class="stepbutton part1 click" data-step="3"></div>
+                <div class="stepbutton part2 click" data-step="4"></div>
+                <div class="stepbutton part2 click" data-step="5"></div>
+                <div class="stepbutton part2 click" data-step="6"></div>
+                <div class="stepbutton part2 click" data-step="7"></div>
+                <div class="stepbutton part3 click" data-step="8"></div>
+                <div class="stepbutton part3 click" data-step="9"></div>
+                <div class="stepbutton part3 click" data-step="10"></div>
+                <div class="stepbutton part3 click" data-step="11"></div>
+                <div class="stepbutton part4 click" data-step="12"></div>
+                <div class="stepbutton part4 click" data-step="13"></div>
+                <div class="stepbutton part4 click" data-step="14"></div>
+                <div class="stepbutton part4 click" data-step="15"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./script.js" charset="utf-8"></script>
+</body>
+</html>
