@@ -172,7 +172,7 @@ $(document).ready(function(){
     var number = $(this).val();
     var max = parseInt($(this).attr('max'));
     var min = parseInt($(this).attr('min'));
-    console.log(number);
+    // console.log(number);
     //reset value to min or max if value exceeds either
     if(number > max){
       $(this).val(max);
@@ -183,7 +183,7 @@ $(document).ready(function(){
     }
     bpm = number*4;
     beat = 60/bpm;
-    console.log("bpm: "+bpm/4);
+    // console.log("bpm: "+bpm/4);
   });
 
   $('.bpmfield').on('keypress',function(event){
