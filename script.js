@@ -57,7 +57,7 @@ function setStepButtonState(drum){
 var bpm = 102*4;      //tempo in beats per minute. multiplied by 4 for 16th notes.
 var beat = 60/bpm;     //length of one beat, in seconds
 //delta time setup
-var lastDelta = Date.now();
+var lastUpdate = Date.now();
 var timer = 0;
 var a = 1;
 //sequencer setup
@@ -83,8 +83,8 @@ var currentDrum = 0;
 setInterval(function(){
   //sets deltatime, time passed since last sequence loop was called
   var time = Date.now();
-  var delta = (time - lastDelta)/1000   // divide by 1000 to convert from milliseconds to seconds
-  lastDelta = time;
+  var delta = (time - lastUpdate)/1000   // divide by 1000 to convert from milliseconds to seconds
+  lastUpdate = time;
   //only add time to delta if the sequencer is running
   if(running){
     timer += delta;
