@@ -88,7 +88,6 @@ setInterval(function(){
   //only add time to delta if the sequencer is running
   if(running){
     timer += delta;
-    console.log(delta);
   }
   //one beat has passed (technically the length of a 16th note because of the multiplier in setup)
   if(timer>=beat){
